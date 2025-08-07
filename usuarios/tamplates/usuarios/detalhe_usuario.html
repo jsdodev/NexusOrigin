@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Detalhes do Usuário</title>
+</head>
+<body>
+    <h1>{{ usuario.nome }}</h1>
+    <p>Email: {{ usuario.email }}</p>
+    <!-- Outros campos que você tenha no modelo Usuario -->
+    <a href="{% url 'lista_usuarios' %}">Voltar à lista</a>
+</body>
+</html>

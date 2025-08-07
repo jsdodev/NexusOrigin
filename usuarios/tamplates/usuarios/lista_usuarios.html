@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Lista de Usuários</title>
+</head>
+<body>
+    <h1>Usuários</h1>
+    <ul>
+    {% for usuario in usuarios %}
+        <li>
+            <a href="{% url 'detalhe_usuario' usuario.id %}">{{ usuario.nome }}</a>
+        </li>
+    {% empty %}
+        <li>Nenhum usuário cadastrado.</li>
+    {% endfor %}
+    </ul>
+</body>
+</html>
