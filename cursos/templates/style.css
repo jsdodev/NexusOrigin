@@ -1,0 +1,193 @@
+:root {
+    /* Cores temáticas */
+    --primary-color: #712cf9;
+    --secondary-color: #6c757d;
+    --light-bg: #f8f9fa;
+    --dark-bg: #212529;
+    --text-light: #f8f9fa;
+    --text-dark: #212529;
+    --hover-effect: 0 4px 6px rgba(0, 0, 0, 0.1);
+    --transition-base: all 0.3s ease-in-out;
+}
+
+/* Reset e Estilos Base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    line-height: 1.6;
+    color: var(--text-dark);
+    background-color: #ffffff;
+    padding-top: 0;
+    overflow-x: hidden;
+}
+
+/* Tipografia Responsiva */
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 0.75rem;
+}
+
+p {
+    margin-bottom: 1rem;
+}
+
+/* Componentes Reutilizáveis */
+
+/* Navbar Aprimorada */
+.navbar {
+    margin-bottom: 0;
+    padding: 1rem 0;
+    transition: var(--transition-base);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.navbar.scrolled {
+    padding: 0.5rem 0;
+    background-color: rgba(33, 37, 41, 0.95) !important;
+    backdrop-filter: blur(10px);
+}
+
+/* Cards Modernizados */
+.card {
+    transition: var(--transition-base);
+    margin-bottom: 1.5rem;
+    border: none;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+    height: 100%;
+}
+
+.card:hover {
+    transform: translateY(-0.5rem);
+    box-shadow: var(--hover-effect);
+}
+
+.card-img-top {
+    height: 225px;
+    object-fit: cover;
+    width: 100%;
+    transition: var(--transition-base);
+}
+
+.card:hover .card-img-top {
+    transform: scale(1.03);
+}
+
+.card-body {
+    padding: 1.5rem;
+}
+
+.card-title {
+    font-size: 1.25rem;
+    margin-bottom: 0.75rem;
+}
+
+/* Seção Hero Aprimorada */
+.hero-section {
+    position: relative;
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('../img/hero-bg.jpg') no-repeat center center;
+    background-size: cover;
+    color: var(--text-light);
+    text-align: center;
+    padding: 5rem 0;
+}
+
+.hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        to right,
+        rgba(0, 0, 0, 0.8) 0%,
+        rgba(0, 0, 0, 0.5) 50%,
+        rgba(0, 0, 0, 0.8) 100%
+    );
+    z-index: 0;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Seção de Contato Aprimorada */
+.contact-section {
+    background-color: var(--light-bg);
+    padding: 4rem 0;
+}
+
+.contact-card {
+    background: white;
+    border-radius: 0.5rem;
+    padding: 2rem;
+    box-shadow: var(--hover-effect);
+}
+
+/* Rodapé Aprimorado */
+footer {
+    background-color: var(--dark-bg);
+    color: var(--text-light);
+    padding: 2rem 0;
+    text-align: center;
+}
+
+footer a {
+    color: var(--text-light);
+    text-decoration: none;
+    transition: var(--transition-base);
+}
+
+footer a:hover {
+    color: var(--primary-color);
+    text-decoration: underline;
+}
+
+/* Efeitos e Animações */
+.fade-in {
+    animation: fadeIn 1s ease-in;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .hero-section {
+        min-height: 60vh;
+        padding: 3rem 0;
+    }
+    
+    .card {
+        margin-bottom: 1rem;
+    }
+    
+    .navbar-brand {
+        font-size: 1rem;
+    }
+}
+
+/* Utilitários */
+.shadow-sm { box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075) !important; }
+.shadow { box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important; }
+.rounded { border-radius: 0.25rem !important; 
