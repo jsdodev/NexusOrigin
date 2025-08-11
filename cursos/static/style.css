@@ -1,5 +1,5 @@
 :root {
-    --primary-color: #6f42c1;
+    --primary-color: #0609a4;
     --primary-hover: #5936a2;
     --secondary-color: #6c757d;
     --secondary-hover: #5a6268;
@@ -202,4 +202,15 @@ footer a:hover {
     .navbar-brand {
         font-size: 1.2rem;
     }
+}
+
+/* Define a fonte padrão para o corpo do site */
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Aplica a fonte específica para o título */
+#hero h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 900; /* Usa o peso mais forte importado */
 }

@@ -16,14 +16,19 @@
     <!-- CSS Personalizado -->
     <link href="{% static 'style.css' %}" rel="stylesheet">
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;900&family=Poppins:wght@400&display=swap" rel="stylesheet">
+
+
 </head>
 <body>
     <!-- Cabeçalho/Navegação -->
     <header class="navbar navbar-dark bg-dark shadow-sm">
         <div class="container">
             <a href="#" class="navbar-brand d-flex align-items-center">
-                <i class="bi bi-camera me-2"></i>
-                <strong>Meu Portfólio</strong>
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRXWTMkLUdi437TexmYQU9FiZMjtcg2-4_Y3A&s" alt="Logo NEXUS - CURSOS" width="92" height="92" class="me-2">
+                <strong>NEXUS - CURSOS</strong>
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarHeader">
                 <span class="navbar-toggler-icon"></span>
@@ -34,29 +39,93 @@
     <!-- Conteúdo Principal -->
     <main>
         <!-- Seção Hero -->
-        <section class="py-5 text-center bg-light">
-            <div class="container">
-                <div class="row py-lg-5">
-                    <div class="col-lg-6 col-md-8 mx-auto">
-                        <h1 class="fw-light">Meu Trabalho</h1>
-                        <p class="lead text-muted">Confira abaixo alguns dos meus projetos mais recentes. Cada imagem representa um trabalho único que desenvolvi com dedicação.</p>
-                        <p>
-                            <a href="#portfolio" class="btn btn-primary my-2">Ver Portfólio</a>
-                            <a href="#contato" class="btn btn-outline-secondary my-2">Contato</a>
+        <section id="hero" class="bg-dark text-white text-center py-5">
+            <div class="container py-lg-5">
+                <div class="row justify-content-center">
+                    <div class="col-lg-8">
+                        <h1 class="fw-bold display-3 mb-2">
+                            Eleve o seu conhecimento.
+                        </h1>
+                        <p class="lead text-white-50 mb-5">
+                            Descubra o seu potencial no mundo da tecnologia com nossa plataforma de aprendizado.
                         </p>
+        
+                        <div class="d-grid gap-3 d-sm-flex justify-content-sm-center">
+                            <a href="#portfolio" class="btn btn-primary btn-lg px-4 me-sm-3">
+                                <i class="bi bi-code-slash me-2"></i>Ver Nossos Cursos
+                            </a>
+                            <a href="#contato" class="btn btn-outline-light btn-lg px-4">
+                                <i class="bi bi-envelope me-2"></i>Falar com um Consultor
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
-
         <!-- Galeria de Portfólio -->
+        <   div id="portfolio" class="album py-5 bg-white">
+            <div class="container">
+                <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-4">
+                    <!-- Item 1 CURSO DE JAVA -->
+                    <div class="col">
+                        <div class="card shadow-sm">
+                            <img src="https://1000logos.net/wp-content/uploads/2020/09/Java-Logo.png" class="card-img-top" alt="Projeto 1">
+                            <div class="card-body">
+                                <h5 class="card-title">Java Completo</h5>
+                                <p class="card-text">De iniciante à profissional: Java com projetos reais e linguagem simples..</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div class="btn-group">
+                                        <button class="btn btn-sm btn-outline-primary">Detalhes</button>
+                                    </div>
+                                    <small class="text-muted">Jan 2024</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Item 2 CURSO DE FRONT END -->
+                    <div class="col">
+                        <div class="card shadow-sm">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSXJ1ac7Y9TsHTb2GRnZidhPbWGTaFIogJmCQ&s" class="card-img-top" alt="Projeto 2">
+                            <div class="card-body">
+                                <h5 class="card-title">Front-End</h5>
+                                <p class="card-text">Domine Front-End e crie interfaces modernas e responsivas do zero..</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div class="btn-group">
+                                        <button class="btn btn-sm btn-outline-primary">Detalhes</button>
+                                    </div>
+                                    <small class="text-muted">Mar 2024</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                <!-- Item 3 CURSO DE PYTHON -->
+                    <div class="col">
+                        <div class="card shadow-sm">
+                            <img src="https://dkrn4sk0rn31v.cloudfront.net/uploads/2020/01/07093212/PYTHON.png" class="card-img-top" alt="Projeto 3">
+                            <div class="card-body">
+                                <h5 class="card-title">Python para Iniciantes</h5>
+                                <p class="card-text">Aprenda Python do zero ao avançado com aulas práticas e projetos reais. Transforme sua lógica em código e dê o próximo passo na sua carreira tech!.</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div class="btn-group">
+                                        <button class="btn btn-sm btn-outline-primary">Detalhes</button>
+                                    </div>
+                                    <small class="text-muted">Abr 2024</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
         <div id="portfolio" class="album py-5 bg-white">
             <div class="container">
                 <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-4">
-                    <!-- Item 1 -->
+                    <!-- Item 1 CURSO DE JAVA -->
                     <div class="col">
                         <div class="card shadow-sm">
-                            <img src="assets/img/thumbnail1.jpg" class="card-img-top" alt="Projeto 1">
+                            <img src="https://1000logos.net/wp-content/uploads/2020/09/Java-Logo.png" class="card-img-top" alt="Projeto 1">
                             <div class="card-body">
                                 <h5 class="card-title">Projeto Website</h5>
                                 <p class="card-text">Desenvolvimento completo de website responsivo para cliente do setor de educação.</p>
@@ -70,10 +139,10 @@
                         </div>
                     </div>
 
-                    <!-- Item 2 -->
+                    <!-- Item 2 CURSO DE FRONT END -->
                     <div class="col">
                         <div class="card shadow-sm">
-                            <img src="assets/img/thumbnail2.jpg" class="card-img-top" alt="Projeto 2">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSXJ1ac7Y9TsHTb2GRnZidhPbWGTaFIogJmCQ&s" class="card-img-top" alt="Projeto 2">
                             <div class="card-body">
                                 <h5 class="card-title">Aplicativo Mobile</h5>
                                 <p class="card-text">Aplicativo desenvolvido para plataforma iOS e Android com React Native.</p>
@@ -87,10 +156,10 @@
                         </div>
                     </div>
 
-                    <!-- Item 3 -->
+                <!-- Item 3 CURSO DE PYTHON -->
                     <div class="col">
                         <div class="card shadow-sm">
-                            <img src="assets/img/thumbnail3.jpg" class="card-img-top" alt="Projeto 3">
+                            <img src="https://dkrn4sk0rn31v.cloudfront.net/uploads/2020/01/07093212/PYTHON.png" class="card-img-top" alt="Projeto 3">
                             <div class="card-body">
                                 <h5 class="card-title">Design de Interface</h5>
                                 <p class="card-text">Conjunto completo de telas para aplicativo bancário com foco em UX.</p>
@@ -106,39 +175,58 @@
                 </div>
             </div>
         </div>
-
+       
+        
         <!-- Seção de Contato -->
-        <div id="contato" class="py-5 bg-light">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-6 mx-auto text-center">
-                        <h2 class="fw-light">Entre em Contato</h2>
-                        <p class="lead text-muted">Tem um projeto em mente? Vamos conversar!</p>
+        <section id="contato" class="bg-dark text-white text-center py-5">
+            <div class="container py-lg-5">
+                <div class="row justify-content-center">
+                    <div class="col-lg-8">
+                        <h2 class="fw-bold mb-4 display-5">Junte-se à nossa comunidade!</h2>
+                        <p class="lead mb-4">
+                            Estamos à procura de mentes criativas para fazer parte da nossa jornada.
+                            <br>Venha construir algo grande com a gente.
+                        </p>
+        
+                        <a href="mailto:seu.email@exemplo.com" class="btn btn-primary btn-lg mb-4">
+                            <i class="bi bi-chat-dots me-2"></i>
+                            Entrar em contato
+                        </a>
+        
                         <div class="d-flex justify-content-center gap-3">
-                            <a href="#" class="btn btn-outline-dark"><i class="bi bi-envelope"></i> Email</a>
-                            <a href="#" class="btn btn-outline-primary"><i class="bi bi-linkedin"></i> LinkedIn</a>
-                            <a href="#" class="btn btn-outline-info"><i class="bi bi-twitter"></i> Twitter</a>
+                            <a href="https://linkedin.com/in/seu-perfil" class="btn btn-outline-light" aria-label="LinkedIn">
+                                <i class="bi bi-linkedin"></i>
+                            </a>
+                            <a href="https://github.com/seu-perfil" class="btn btn-outline-light" aria-label="GitHub">
+                                <i class="bi bi-github"></i>
+                            </a>
+                            <a href="https://instagram.com/seu-perfil" class="btn btn-outline-light" aria-label="Instagram">
+                                <i class="bi bi-instagram"></i>
+                            </a>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </main>
+        </section>
 
     <!-- Rodapé -->
-    <footer class="text-muted py-4">
-        <div class="container">
-            <p class="float-end mb-1">
-                <a href="#" class="text-decoration-none">Voltar ao topo</a>
-            </p>
-            <p class="mb-1">© 2024 Meu Portfólio. Todos os direitos reservados.</p>
+    <footer class="bg-dark text-white-50 py-5">
+        <div class="container d-flex justify-content-between align-items-center">
+            <div class="text-start">
+                <p class="mb-0">&copy; 2025 NEXUS - CURSOS. Todos os direitos reservados.</p>
+                <p class="mb-0">Desenvolvido com dedicação por: Bernardo Sena, Gabriel Damasceno, Joyce Oliveira e João Rodrigo.</p>
+            </div>
+    
+            <div class="text-end">
+                <a href="#" class="btn btn-sm btn-outline-light d-flex align-items-center" aria-label="Voltar ao topo">
+                    <i class="bi bi-arrow-up-circle-fill me-2"></i>Voltar ao topo
+                </a>
+                </div>
         </div>
     </footer>
-
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     
-    <!-- JS Personalizado -->
-    <script src="assets/js/main.js"></script>
+    
 </body>
 </html>
