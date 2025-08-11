@@ -12,10 +12,10 @@ body {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    /* Certifique-se que o caminho para a imagem está correto dentro da sua pasta static */   
-    background:black;  
+    background: black;
     background-size: cover;
     background-position: center;
+}
 
 
 .container {
@@ -142,4 +142,5 @@ body {
     .esqueci-senha {
         font-size: 12px; /* Diminui a fonte para caber melhor */
     }
+}
 }

@@ -4,13 +4,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Primeiro Login</title>
+    <title>Login</title>
     
     <!-- Ícones do Boxicons -->
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     
     <!-- Seu arquivo CSS -->
-    <link rel="stylesheet" href="{% static '/usuarios/assets/js/style.css' %}">
+    {% load static %}
+<link rel="stylesheet" href="{% static 'usuarios/style.css' %}">
+
 </head>
 <body>
     <main class="container">
