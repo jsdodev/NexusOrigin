@@ -1,146 +1,22 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: "Roboto Mono", monospace;
-}
+/* Estilos em main/static/style.css */
 
 body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    background: black;
-    background-size: cover;
-    background-position: center;
+    background-color: #000; /* Fundo preto */
+    color: #fff; /* Texto branco para melhor contraste */
 }
-
 
 .container {
-    width: 420px;
-    background-color: transparent;
-    border: 2px solid rgba(255, 255, 255, 0.2);
-    border-radius: 20px;
-    color: whitesmoke;
-    padding: 30px 40px;
-    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
-    backdrop-filter: blur(15px);
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5); /* Sombra ao redor do container */
+    padding: 20px; /* Adiciona um pouco de espaço interno */
+    background-color: #222; /* Um tom de preto mais claro para o container */
+    border-radius: 5px; /* Bordas arredondadas no container */
+    margin-top: 20px; /* Espaçamento superior */
 }
 
-.container h1 {
-    font-size: 36px;
-    text-align: center;
+.btn-primary {
+    transition: background-color 0.3s ease; /* Adiciona uma transição suave na cor de fundo */
 }
 
-.input-box {
-    position: relative;
-    width: 100%;
-    height: 50px;
-    margin: 30px 0;
-}
-
-.input-box input {
-    width: 100%;
-    height: 100%;
-    background-color: transparent;
-    border: 2px solid rgba(255, 255, 255, .2);
-    border-radius: 40px;
-    outline: none;
-    font-size: 16px;
-    color: white;
-    padding: 20px 45px 20px 20px;
-}
-
-.input-box input::placeholder {
-    color: rgba(255, 255, 255, 0.8);
-}
-
-.input-box i {
-    position: absolute;
-    right: 20px;
-    top: 50%;
-    transform: translateY(-50%);
-    font-size: 20px;
-}
-
-.esqueci-senha {
-    display: flex;
-    justify-content: space-between;
-    font-size: 14.5px;
-    margin: -15px 0 15px;
-}
-
-.esqueci-senha label {
-    display: flex;
-    align-items: center;
-}
-
-.esqueci-senha label input {
-    accent-color: whitesmoke;
-    margin-right: 5px;
-}
-
-.esqueci-senha a {
-    text-decoration: none;
-    color: whitesmoke;
-}
-
-.esqueci-senha a:hover {
-    text-decoration: underline;
-}
-    
-.login {
-    width: 100%;
-    height: 45px;
-    background-color: #FFF;
-    border: none;
-    border-radius: 40px;
-    cursor: pointer;
-    font-size: 16px;
-    color: #333;
-    font-weight: 600;
-    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
-    margin-top: 10px;
-    transition: background-color 0.3s ease, border 0.3s ease;
-}
-
-.login:hover {
-    background-color: rgba(255, 255, 255, 0.1);
-    border: 2px solid rgba(255, 255, 255, 0.5);
-    color: white;
-}
-
-.Cadastro {
-    font-size: 14.5px;
-    text-align: center;
-    margin: 20px 0 15px;
-}
-
-.Cadastro a {
-    color: whitesmoke;
-    text-decoration: none;
-    font-weight: 600;
-}
-
-.Cadastro a:hover {
-    text-decoration: underline;
-}
-
-/* --- REGRAS DE RESPONSIVIDADE --- */
-@media (max-width: 480px) {
-    .container {
-        width: 90%; /* Ocupa 90% da tela em vez de 420px fixo */
-        padding: 20px;
-    }
-
-    .container h1 {
-        font-size: 28px; /* Diminui um pouco o título */
-    }
-
-    .esqueci-senha {
-        font-size: 12px; /* Diminui a fonte para caber melhor */
-    }
-}
+.btn-primary:hover {
+    background-color: #0056b3; /* Cor de fundo mais escura no hover (tom original do Bootstrap) */
 }

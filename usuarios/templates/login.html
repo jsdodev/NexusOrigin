@@ -1,49 +1,41 @@
 {% load static %}
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
-    
-    <!-- Ícones do Boxicons -->
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    
-    <!-- Seu arquivo CSS -->
-    {% load static %}
-<link rel="stylesheet" href="{% static 'usuarios/style.css' %}">
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
 
-</head>
-<body>
-    <main class="container">
-        <form>
-            <h1>Login</h1>
-            
-            <div class="input-box">
-                <input placeholder="Usuário" type="email" required>
-                <i class="bx bxs-user"></i>
-            </div>
-            
-            <div class="input-box">
-                <input placeholder="Senha" type="password" required>
-                <i class="bx bxs-lock-alt"></i>
-            </div>
+    <title>Página de Login</title>
+  </head>
+  <body>
 
-            <div class="esqueci-senha"> 
-                <label>
-                    <input type="checkbox">
-                    Lembrar senha
-                </label>
-                <a href="#">Esqueci senha</a>
-            </div>
+    <div class="container mt-5">
+      <h2>Login</h2>
+      <form method="POST">
+        {% csrf_token %} <div class="form-group">
+          <label for="exampleInputEmail1">Email address</label>
+          <input type="email" class="form-control" id="exampleInputEmail1" name="email" aria-describedby="emailHelp">
+          <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+        </div>
 
-            <button type="submit" class="login">Login</button>
+        <div class="form-group">
+          <label for="exampleInputPassword1">Password</label>
+          <input type="password" class="form-control" id="exampleInputPassword1" name="password">
+        </div>
 
-            <div class="Cadastro">
-                <!-- Boa prática: Use a tag 'url' do Django para links internos -->
-            </div>
-        </form>
-    </main>
-    
-</body>
+        <div class="form-group form-check">
+          <input type="checkbox" class="form-check-input" id="exampleCheck1">
+          <label class="form-check-label" for="exampleCheck1">Check me out</label>
+        </div>
+        
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
+      </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
+  </body>
 </html>
+
