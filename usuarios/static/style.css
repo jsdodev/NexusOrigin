@@ -1,0 +1,114 @@
+/* style.css */
+
+/* Estilo geral da página */
+body {
+    background-color: #000; /* Fundo preto */
+    color: #fff; /* Texto branco para contraste */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 20px;
+}
+
+/* Container do formulário */
+form {
+    background-color: #1a1a1a; /* Cinza escuro para o formulário */
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5); /* Sombra cinza */
+    width: 100%;
+    max-width: 450px;
+    transition: all 0.3s ease;
+}
+
+/* Efeito hover no formulário */
+form:hover {
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.6);
+    transform: translateY(-5px);
+}
+
+/* Estilo dos campos de input */
+.form-control {
+    background-color: #333;
+    border: 1px solid #444;
+    color: #fff;
+    padding: 12px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.form-control:focus {
+    background-color: #444;
+    border-color: #ffc107; /* Amarelo do Bootstrap para combinar com o botão */
+    box-shadow: 0 0 0 0.25rem rgba(255, 193, 7, 0.25);
+    color: #fff;
+}
+
+/* Estilo das labels */
+.form-label {
+    font-weight: 500;
+    color: #ffc107; /* Amarelo do Bootstrap */
+    margin-bottom: 8px;
+}
+
+/* Texto de ajuda */
+.form-text {
+    color: #aaa !important;
+}
+
+/* Checkbox personalizado */
+.form-check-input {
+    background-color: #333;
+    border: 1px solid #444;
+}
+
+.form-check-input:checked {
+    background-color: #ffc107;
+    border-color: #ffc107;
+}
+
+/* Botão de login */
+.btn-warning {
+    background-color: #ffc107;
+    border: none;
+    color: #000;
+    font-weight: 600;
+    padding: 10px 20px;
+    border-radius: 5px;
+    width: 100%;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.btn-warning:hover {
+    background-color: #ffca2c;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(255, 193, 7, 0.3);
+}
+
+.btn-warning:active {
+    transform: translateY(0);
+}
+
+/* Título da página (adicione se quiser) */
+.login-title {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #ffc107;
+    font-weight: 700;
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 576px) {
+    form {
+        padding: 20px;
+    }
+    
+    .form-control {
+        padding: 10px;
+    }
+}
