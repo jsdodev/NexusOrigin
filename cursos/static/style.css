@@ -1,12 +1,12 @@
 :root {
-    --primary-color: #0609a4;
-    --primary-hover: #5936a2;
-    --secondary-color: #6c757d;
-    --secondary-hover: #5a6268;
+    --primary-color: #0054b4;
+    --primary-hover: #320cc9;
+    --secondary-color: #176cc1;
+    --secondary-hover: #080d11;
 
-    --light-bg: #f8f9fa;
+    --light-bg: #212529;
     --dark-bg: #1c1e21;
-    --card-bg: #ffffff;
+    --card-bg: #f5f5f5;
 
     --text-light: #f1f1f1;
     --text-dark: #212529;
@@ -29,10 +29,16 @@ html {
 
 body {
     font-family: 'Segoe UI', system-ui, sans-serif;
-    background-color: var(--light-bg);
-    color: var(--text-dark);
+    background-color: black;
+    color: var(--text-light);
     line-height: 1.7;
     font-size: 16px;
+}
+
+/* Força todo .bg-light a ficar preto */
+.bg-light {
+    background-color: #000000 !important;
+    color: #ffffff !important;
 }
 
 /* ===================== NAVBAR ===================== */
@@ -59,10 +65,9 @@ body {
 
 /* ===================== HERO SECTION ===================== */
 section.text-center.bg-light {
-    background: linear-gradient(to right, #f8f9fa, #ececec);
+    background: #000000; /* preto */
     padding: 5rem 0;
 }
-
 section.text-center h1 {
     font-size: 3rem;
     color: var(--primary-color);
@@ -72,7 +77,7 @@ section.text-center h1 {
 
 section.text-center p.lead {
     font-size: 1.25rem;
-    color: #555;
+    color: #ccc;
     margin-bottom: 2rem;
 }
 
@@ -98,7 +103,7 @@ section.text-center .btn {
 
 /* ===================== CARDS ===================== */
 .album {
-    background-color: var(--light-bg);
+    background-color: #000000;
 }
 
 .card {
@@ -142,7 +147,7 @@ section.text-center .btn {
 
 /* ===================== CONTATO ===================== */
 #contato {
-    background-color: #f1f1f1;
+    background-color: #000000;
     padding: 4rem 0;
 }
 
@@ -155,7 +160,7 @@ section.text-center .btn {
 
 #contato p.lead {
     font-size: 1.1rem;
-    color: #666;
+    color: #ccc;
 }
 
 #contato .btn {
@@ -204,13 +209,12 @@ footer a:hover {
     }
 }
 
-/* Define a fonte padrão para o corpo do site */
+/* ===================== FONTES PERSONALIZADAS ===================== */
 body {
     font-family: 'Poppins', sans-serif;
 }
 
-/* Aplica a fonte específica para o título */
 #hero h1 {
     font-family: 'Montserrat', sans-serif;
-    font-weight: 900; /* Usa o peso mais forte importado */
+    font-weight: 900;
 }
