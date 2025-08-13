@@ -33,7 +33,7 @@
         }
         
         .login-card {
-            background-color: rgba(255, 255, 255, 0.05);
+            background-color: rgba(0, 0, 0, 0.05);
             backdrop-filter: blur(10px);
             border-radius: 15px;
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
@@ -45,7 +45,7 @@
         }
         
         .login-card:hover {
-            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+            box-shadow: 0 15px 40px rgba(255, 255, 255, 0.4);
             transform: translateY(-5px);
         }
         
@@ -112,7 +112,7 @@
         }
         
         .btn-login:hover {
-            background-color: #3a56b0;
+            background-color: #5f528d;
             transform: translateY(-2px);
             box-shadow: 0 5px 15px rgba(78, 115, 223, 0.4);
         }
@@ -137,15 +137,15 @@
 </head>
 <body>
     <!-- Container Principal -->
-    <div class="login-container">
+    <div class="login-container"> 
         <div class="login-card">
-            <h1 class="login-title">
-                <i class="bi bi-shield-lock-fill me-2"></i>
+            <h1 class="login-title"> Login
+                
             </h1>
             
-            <form method="POST" action="#">
+            <form method="POST" action="#"> 
                 {% csrf_token %}
-                <div class="mb-4">
+                <div class="mb-4"> 
                     <label for="exampleInputEmail1" class="form-label">Email</label>
                     <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" required>
                     <div id="emailHelp" class="form-text">Nós nunca compartilharemos seu email com ninguém.</div>
