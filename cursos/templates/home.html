@@ -23,43 +23,59 @@
 
 </head>
 <body>
-    <!-- Cabeçalho/Navegação -->
-    <header class="navbar navbar-dark bg-dark shadow-sm">
+    <header class="navbar navbar-expand-lg navbar-dark bg-black shadow-sm py-3">
         <div class="container">
+            <!-- Logo + Texto -->
             <a href="#" class="navbar-brand d-flex align-items-center">
-                {% load static %}
-                <img src="{% static 'img/logo2.png.png' %}" alt="NEXUS - CURSOS" width="210" height="210" class="me-2">
-
-
-                <strong></strong>
+                <img src="{% static 'img/logo2.png.png' %}" alt="NEXUS - CURSOS" width="220" height="220" class="me-2">
+                <div class="d-flex flex-column">
+                </div>
             </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarHeader">
+    
+            <!-- Botão Hambúrguer -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMenu" 
+                    aria-controls="navbarMenu" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
+    
+            <!-- Menu -->
+            <div class="collapse navbar-collapse" id="navbarMenu">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-center gap-3">
+                    <li class="nav-item">
+                        <a class="nav-link px-3" href="#">Planos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link px-3" href="#">Sobre Nós</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="btn btn-outline-light px-3" href="{% url 'login' %}">Login</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="btn btn-primary px-3" href="#">Cadastro</a>
+                    </li>
+                </ul>
+            </div>
         </div>
     </header>
-
     <!-- Conteúdo Principal -->
     <main>
         <!-- Seção Hero -->
-        <section id="hero" class="bg-dark text-white text-center py-5">
+        <section id="hero" class="bg-black text-white text-center py-5">
             <div class="container py-lg-5">
                 <div class="row justify-content-center">
                     <div class="col-lg-8">
-                        <h1 class="fw-bold display-3 mb-2">
-                            CONEXÃO QUE TRANSFORMA
+                        <h1 class="fw-bold display-3 mb-2 font-Times">
+                            <Strong>CONEXÃO QUE TRANSFORMA</Strong>
                         </h1>
                         <p class="lead text-white-50 mb-5">
                             Descubra o seu potencial no mundo da tecnologia com nossa plataforma de aprendizado.
                         </p>
         
                         <div class="d-grid gap-3 d-sm-flex justify-content-sm-center">
-                            <a href="#portfolio" class="btn btn-primary btn-lg px-4 me-sm-3">
+                            <a href="#portfolio" class="btn btn-primary btn-lg px-3 me-sm-3">
                                 <i class="bi bi-code-slash me-2"></i>Ver Nossos Cursos
                             </a>
-                            <a href="#contato" class="btn btn-outline-light btn-lg px-4">
-                                <i class="bi bi-envelope me-2"></i>Falar com um Consultor
-                            </a>
+                        
                         </div>
                     </div>
                 </div>
@@ -121,7 +137,7 @@
                 </div>
             </div>
         </div>
-        <div id="portfolio" class="album py-5 bg-white">
+        <div id="portfolio" class="album py-5 bg-black">
             <div class="container">
                 <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-4">
                     <!-- Item 4 CURSO DE IA -->
@@ -180,12 +196,12 @@
        
         
         <!-- Seção de Contato -->
-        <section id="contato" class="bg-dark text-white text-center py-5">
+        <section id="contato" class="bg-white text-black text-center py-5">
             <div class="container py-lg-5">
                 <div class="row justify-content-center">
                     <div class="col-lg-8">
                         <h2 class="fw-bold mb-4 display-5">Junte-se à nossa comunidade!</h2>
-                        <p class="lead mb-4">
+                        <p class="lead mb-4 text-black">
                             Estamos à procura de mentes criativas para fazer parte da nossa jornada.
                             <br>Venha construir algo grande com a gente.
                         </p>
@@ -214,7 +230,7 @@
     <!-- Rodapé -->
     <footer class="bg-dark text-white-50 py-5">
         <div class="container d-flex justify-content-between align-items-center">
-            <div class="text-start">
+            <div class="text-start text-white">
                 <p class="mb-0">&copy; 2025 NEXUS - CURSOS. Todos os direitos reservados.</p>
                 <p class="mb-0">Desenvolvido com dedicação por: Bernardo Sena, Gabriel Damasceno, Joyce Oliveira e João Rodrigo.</p>
             </div>
