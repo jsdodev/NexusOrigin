@@ -15,3 +15,5 @@ def login_view(request):
             messages.error(request, 'E-mail ou senha inválidos.')
     
     return render(request, 'login.html')  # Renderiza o template de login
+def planos_view(request):
+    return render(request, 'planos.html')
