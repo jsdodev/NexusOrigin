@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Planos de Cursos | Sua Plataforma de Aprendizado</title>
+    <style>
+        :root {
+            --primary-color: #6e48aa;
+            --secondary-color: #9d50bb;
+            --accent-color: #4776E6;
+            --light-color: #f8f9fa;
+            --dark-color: #343a40;
+            --success-color: #28a745;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: #f5f5f5;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+            padding: 30px 0;
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+        
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+        }
+        
+        .subtitle {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+        
+        .plans-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+            margin-bottom: 50px;
+        }
+        
+        .plan-card {
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 350px;
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .plan-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+        }
+        
+        .plan-header {
+            padding: 25px;
+            text-align: center;
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+        }
+        
+        .plan-header.featured {
+            background: linear-gradient(135deg, var(--accent-color), #5c8df6);
+        }
+        
+        .plan-title {
+            font-size: 1.8rem;
+            margin-bottom: 10px;
+        }
+        
+        .plan-description {
+            font-size: 0.9rem;
+            opacity: 0.9;
+        }
+        
+        .plan-price {
+            padding: 20px;
+            text-align: center;
+            background-color: var(--light-color);
+            border-bottom: 1px solid #eee;
+        }
+        
+        .price-amount {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: var(--primary-color);
+        }
+        
+        .price-period {
+            font-size: 1rem;
+            color: #666;
+        }
+        
+        .price-promo {
+            color: var(--success-color);
+            font-weight: bold;
+            margin-top: 5px;
+        }
+        
+        .plan-features {
+            padding: 25px;
+        }
+        
+        .feature-list {
+            list-style: none;
+        }
+        
+        .feature-list li {
+            padding: 10px 0;
+            border-bottom: 1px solid #eee;
+            display: flex;
+            align-items: center;
+        }
+        
+        .feature-list li:last-child {
+            border-bottom: none;
+        }
+        
+        .feature-list li::before {
+            content: "✓";
+            color: var(--success-color);
+            font-weight: bold;
+            margin-right: 10px;
+        }
+        
+        .plan-button {
+            display: block;
+            text-align: center;
+            padding: 15px;
+            margin: 0 25px 25px;
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background 0.3s ease;
+        }
+        
+        .plan-button:hover {
+            background: linear-gradient(135deg, var(--secondary-color), var(--primary-color));
+        }
+        
+        .featured .plan-button {
+            background: linear-gradient(135deg, var(--accent-color), #5c8df6);
+        }
+        
+        .featured .plan-button:hover {
+            background: linear-gradient(135deg, #5c8df6, var(--accent-color));
+        }
+        
+        .disclaimer {
+            text-align: center;
+            color: #666;
+            font-size: 0.9rem;
+            margin-top: 40px;
+            padding: 20px;
+            border-top: 1px solid #eee;
+        }
+        
+        @media (max-width: 768px) {
+            .plans-container {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .plan-card {
+                max-width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>CONEXÃO QUE TRANSFORMA</h1>
+            <p class="subtitle">Descubra seu potencial no mundo da tecnologia com nossa plataforma de aprendizado.</p>
+        </header>
+        
+        <div class="plans-container">
+            <!-- Plano Básico -->
+            <div class="plan-card">
+                <div class="plan-header">
+                    <h2 class="plan-title">Básico</h2>
+                    <p class="plan-description">Ideal para quem está começando na programação</p>
+                </div>
+                <div class="plan-price">
+                    <div class="price-amount">R$ 29,90</div>
+                    <div class="price-period">por mês</div>
+                    <div class="price-promo">7 dias grátis</div>
+                </div>
+                <div class="plan-features">
+                    <ul class="feature-list">
+                        <li>Acesso a todos os cursos de JavaScript</li>
+                        <li>Certificado de conclusão</li>
+                        <li>Suporte da comunidade</li>
+                        <li>Acesso via mobile</li>
+                        <li>1 curso simultâneo</li>
+                    </ul>
+                </div>
+                <a href="#" class="plan-button">Comece agora</a>
+            </div>
+            
+            <!-- Plano Premium (Destaque) -->
+            <div class="plan-card featured">
+                <div class="plan-header featured">
+                    <h2 class="plan-title">Premium</h2>
+                    <p class="plan-description">O mais completo para sua carreira em tecnologia</p>
+                </div>
+                <div class="plan-price">
+                    <div class="price-amount">R$ 59,90</div>
+                    <div class="price-period">por mês</div>
+                    <div class="price-promo">30 dias grátis</div>
+                </div>
+                <div class="plan-features">
+                    <ul class="feature-list">
+                        <li>Acesso a TODOS os cursos da plataforma</li>
+                        <li>Certificado de conclusão</li>
+                        <li>Suporte prioritário</li>
+                        <li>Acesso via mobile e desktop</li>
+                        <li>Cursos simultâneos ilimitados</li>
+                        <li>Projetos práticos</li>
+                        <li>Conteúdo exclusivo</li>
+                    </ul>
+                </div>
+                <a href="#" class="plan-button">Assine o Premium</a>
+            </div>
+            
+            <!-- Plano Anual -->
+            <div class="plan-card">
+                <div class="plan-header">
+                    <h2 class="plan-title">Anual</h2>
+                    <p class="plan-description">Economize com compromisso anual</p>
+                </div>
+                <div class="plan-price">
+                    <div class="price-amount">R$ 499,90</div>
+                    <div class="price-period">por ano</div>
+                    <div class="price-promo">Economize R$ 218,90</div>
+                </div>
+                <div class="plan-features">
+                    <ul class="feature-list">
+                        <li>Todos os benefícios do Premium</li>
+                        <li>Economia de 30%</li>
+                        <li>Workshops exclusivos</li>
+                        <li>Mentoria trimestral</li>
+                        <li>Descontos em eventos</li>
+                    </ul>
+                </div>
+                <a href="#" class="plan-button">Assinar Anual</a>
+            </div>
+        </div>
+        
+        <div class="disclaimer">
+            <p>*Os planos podem ser cancelados a qualquer momento. Ao continuar, você concorda com nossos Termos de Serviço e Política de Privacidade.</p>
+        </div>
+    </div>
+</body>
+</html>
