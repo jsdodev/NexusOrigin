@@ -7,31 +7,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>NEXUS - CURSOS</title>
     
-    <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     
-    <!-- Bootstrap Icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
     
-    <!-- CSS Personalizado -->
     <link href="{% static 'style.css' %}" rel="stylesheet">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;900&family=Poppins:wght@400&display=swap" rel="stylesheet">
-
-
 </head>
 <body>
-    <!-- Cabeçalho/Navegação -->
     <header class="navbar navbar-dark bg-dark shadow-sm">
         <div class="container">
-            <a href="#" class="navbar-brand d-flex align-items-center">
-                {% load static %}
+            <a href="{% url 'home' %}" class="navbar-brand d-flex align-items-center">
                 <img src="{% static 'img/logo2.png.png' %}" alt="NEXUS - CURSOS" width="210" height="210" class="me-2">
-
-
-                <strong></strong>
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarHeader">
                 <span class="navbar-toggler-icon"></span>
@@ -39,9 +29,7 @@
         </div>
     </header>
 
-    <!-- Conteúdo Principal -->
     <main>
-        <!-- Seção Hero -->
         <section id="hero" class="bg-dark text-white text-center py-5">
             <div class="container py-lg-5">
                 <div class="row justify-content-center">
@@ -52,7 +40,7 @@
                         <p class="lead text-white-50 mb-5">
                             Descubra o seu potencial no mundo da tecnologia com nossa plataforma de aprendizado.
                         </p>
-        
+                        
                         <div class="d-grid gap-3 d-sm-flex justify-content-sm-center">
                             <a href="#portfolio" class="btn btn-primary btn-lg px-4 me-sm-3">
                                 <i class="bi bi-code-slash me-2"></i>Ver Nossos Cursos
@@ -65,121 +53,31 @@
                 </div>
             </div>
         </section>
-        <!-- Galeria de Portfólio -->
-            <div class="container">
-                <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-4">
-                    <!-- Item 1 CURSO DE JAVA -->
-                    <div class="col">
-                        <div class="card shadow-sm">
-                            <img src="https://blog.facialix.com/wp-content/uploads/2022/08/logo-curso-introduccion-programacion-js.jpg" class="card-img-top" alt="Projeto 1">
-                            <div class="card-body">
-                                <h5 class="card-title">Java Completo</h5>
-                                <p class="card-text">De iniciante à profissional: Java com projetos reais e linguagem simples..</p>
-                                <div class="d-flex justify-content-between align-items-center">
-                                    <div class="btn-group">
-                                        <button class="btn btn-sm btn-outline-primary">Detalhes</button>
-                                    </div>
-                                    <small class="text-muted"></small>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
 
-                    <!-- Item 2 CURSO DE FRONT END -->
-                    <div class="col">
-                        <div class="card shadow-sm">
-                            <img src="https://usemobile.com.br/wp-content/uploads/2024/05/capa-front-end.jpg" class="card-img-top" alt="Projeto 2">
-                            <div class="card-body">
-                                <h5 class="card-title">Front-End</h5>
-                                <p class="card-text">Domine Front-End e crie interfaces modernas e responsivas do zero..</p>
-                                <div class="d-flex justify-content-between align-items-center">
-                                    <div class="btn-group">
-                                        <button class="btn btn-sm btn-outline-primary">Detalhes</button>
-                                    </div>
-                                    <small class="text-muted"></small>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                <!-- Item 3 CURSO DE PYTHON -->
-                    <div class="col">
-                        <div class="card shadow-sm">
-                            <img src="https://dkrn4sk0rn31v.cloudfront.net/uploads/2020/01/07093212/PYTHON.png" class="card-img-top" alt="Projeto 3">
-                            <div class="card-body">
-                                <h5 class="card-title">Python para Iniciantes</h5>
-                                <p class="card-text">Aprenda Python do zero ao avançado com aulas práticas e projetos reais..</p>
-                                <div class="d-flex justify-content-between align-items-center">
-                                    <div class="btn-group">
-                                        <button class="btn btn-sm btn-outline-primary">Detalhes</button>
-                                    </div>
-                                    <small class="text-muted"></small>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
         <div id="portfolio" class="album py-5 bg-white">
             <div class="container">
                 <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-4">
-                    <!-- Item 4 CURSO DE IA -->
-                    <div class="col">
-                        <div class="card shadow-sm">
-                            <img src="https://wordpress-cms-gc-prod-assets.quero.space/uploads/2023/04/Inteligencia-Artificial.jpg" class="card-img-top" alt="Projeto 1">
-                            <div class="card-body">
-                                <h5 class="card-title">Domine IA</h5>
-                                <p class="card-text">Do básico à criação de modelos inteligentes: sua jornada em IA começa aqui..</p>
-                                <div class="d-flex justify-content-between align-items-center">
-                                    <div class="btn-group">
-                                        <button class="btn btn-sm btn-outline-primary">Detalhes</button>
+                    {% for slug, curso_data in cursos.items %}
+                        <div class="col">
+                            <div class="card shadow-sm">
+                                <img src="{{ curso_data.imagem }}" class="card-img-top" alt="Capa do Curso de {{ curso_data.nome }}">
+                                <div class="card-body">
+                                    <h5 class="card-title">{{ curso_data.nome }}</h5>
+                                    <p class="card-text">{{ curso_data.descr }}</p>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <div class="btn-group">
+                                            <a href="{% url 'curso_detalhes' slug=slug %}" class="btn btn-primary">Detalhes</a>
+                                        </div>
+                                        <small class="text-muted"></small>
                                     </div>
-                                    <small class="text-muted"></small>
                                 </div>
                             </div>
                         </div>
-                    </div>
-
-                    <!-- Item 5 CURSO DE  GIT E GITHUB -->
-                    <div class="col">
-                        <div class="card shadow-sm">
-                            <img src="https://assets.dio.me/vcgnme8q1cSGzdYzWL_wURKVR8sP_w-84qtgRf3N8_o/f:webp/q:80/L2FydGljbGVzL2NvdmVyL2QyNDg5Zjk2LWQ1NmYtNGI4Mi1iYzdmLTg0ZmJjOWZiMTM2OC5qcGc" class="card-img-top" alt="Projeto 2">
-                            <div class="card-body">
-                                <h5 class="card-title">Git e GitHub</h5>
-                                <p class="card-text">Aprenda Git e GitHub e eleve seu nível em qualquer projeto de programação..</p>
-                                <div class="d-flex justify-content-between align-items-center">
-                                    <div class="btn-group">
-                                        <button class="btn btn-sm btn-outline-primary">Detalhes</button>
-                                    </div>
-                                    <small class="text-muted"></small>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                <!-- Item 3 CURSO DE HTML E CSS -->
-                    <div class="col">
-                        <div class="card shadow-sm">
-                            <img src="https://hotmart.s3.amazonaws.com/product_pictures/d2badee3-49a9-4627-9f7d-a5e51ae35384/sitehtmlcss1024x579.jpg" class="card-img-top" alt="Projeto 3">
-                            <div class="card-body">
-                                <h5 class="card-title">HTML e CSS</h5>
-                                <p class="card-text">Aprenda HTML e CSS e crie sites incríveis do zero. 100% online e prático.</p>
-                                <div class="d-flex justify-content-between align-items-center">
-                                    <div class="btn-group">
-                                        <button class="btn btn-sm btn-outline-primary">Detalhes</button>
-                                    </div>
-                                    <small class="text-muted"></small>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    {% endfor %}
                 </div>
             </div>
         </div>
-       
         
-        <!-- Seção de Contato -->
         <section id="contato" class="bg-dark text-white text-center py-5">
             <div class="container py-lg-5">
                 <div class="row justify-content-center">
@@ -189,12 +87,12 @@
                             Estamos à procura de mentes criativas para fazer parte da nossa jornada.
                             <br>Venha construir algo grande com a gente.
                         </p>
-        
+                        
                         <a href="mailto:seu.email@exemplo.com" class="btn btn-primary btn-lg mb-4">
                             <i class="bi bi-chat-dots me-2"></i>
                             Entrar em contato
                         </a>
-        
+                        
                         <div class="d-flex justify-content-center gap-3">
                             <a href="https://linkedin.com/in/seu-perfil" class="btn btn-outline-light" aria-label="LinkedIn">
                                 <i class="bi bi-linkedin"></i>
@@ -211,24 +109,21 @@
             </div>
         </section>
 
-    <!-- Rodapé -->
     <footer class="bg-dark text-white-50 py-5">
         <div class="container d-flex justify-content-between align-items-center">
             <div class="text-start">
                 <p class="mb-0">&copy; 2025 NEXUS - CURSOS. Todos os direitos reservados.</p>
                 <p class="mb-0">Desenvolvido com dedicação por: Bernardo Sena, Gabriel Damasceno, Joyce Oliveira e João Rodrigo.</p>
             </div>
-    
+            
             <div class="text-end">
                 <a href="#" class="btn btn-sm btn-outline-light d-flex align-items-center" aria-label="Voltar ao topo">
                     <i class="bi bi-arrow-up-circle-fill me-2"></i>Voltar ao topo
                 </a>
-                </div>
+            </div>
         </div>
     </footer>
-    <!-- Bootstrap JS -->
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-    
-    
 </body>
 </html>

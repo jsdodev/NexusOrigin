@@ -1,0 +1,110 @@
+/* Importação de fontes (você já tem no HTML, mas é bom ter aqui para organização) */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700;900&family=Poppins:wght@400&display=swap');
+
+/* Estilos gerais do corpo da página */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f8f9fa; /* Um cinza claro para o fundo */
+    color: #343a40; /* Cor de texto padrão */
+}
+
+/* Estilos para o cabeçalho/navegação */
+header.navbar {
+    background-color: #212529 !important; /* Cor de fundo escura, padrão do bootstrap */
+    border-bottom: 3px solid #007bff; /* Linha azul destacando o rodapé */
+}
+
+.navbar-brand img {
+    /* Garante que a imagem não seja muito grande */
+    max-width: 150px;
+    height: auto;
+}
+
+/* Estilos para a seção hero (topo da página) */
+#hero {
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('img/background.jpg') no-repeat center center;
+    background-size: cover;
+    color: #ffffff;
+}
+
+#hero h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 900;
+    text-transform: uppercase;
+    font-size: 3rem; /* Tamanho da fonte para a headline */
+}
+
+/* Estilos para os botões */
+.btn-primary {
+    background-color: #007bff; /* Cor principal azul */
+    border-color: #007bff;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3; /* Tom mais escuro no hover */
+    border-color: #004085;
+}
+
+.btn-outline-light {
+    color: #ffffff;
+    border-color: #ffffff;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.btn-outline-light:hover {
+    background-color: #ffffff;
+    color: #212529;
+}
+
+/* Estilos para os cartões (cards de curso) */
+.card {
+    border: none;
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px); /* Efeito de elevação no hover */
+    box-shadow: 0 1rem 3rem rgba(0,0,0,.175)!important;
+}
+
+.card-title {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    color: #007bff;
+}
+
+.card-text {
+    font-size: 0.95rem;
+    color: #6c757d;
+}
+
+/* Estilos para a página de detalhes do curso */
+main.container {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+.ratio {
+    border-radius: 10px;
+    overflow: hidden; /* Garante que as bordas arredondadas funcionem */
+    box-shadow: 0 0.5rem 1rem rgba(0,0,0,.15);
+}
+
+/* Estilos para a seção de contato */
+#contato {
+    background-color: #212529 !important; /* Cor de fundo escura, padrão do bootstrap */
+}
+
+#contato h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 900;
+}
+
+/* Estilos para o rodapé */
+footer.bg-dark {
+    border-top: 3px solid #007bff; /* Linha azul destacando o rodapé */
+}
