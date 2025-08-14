@@ -1,7 +1,7 @@
 from django.shortcuts import render, redirect
 from django.contrib.auth import authenticate, login
 from django.contrib import messages
-
+#classe login
 def login_view(request):
     if request.method == 'POST':
         email = request.POST.get('email')  # Campo do formulário
@@ -15,5 +15,7 @@ def login_view(request):
             messages.error(request, 'E-mail ou senha inválidos.')
     
     return render(request, 'login.html')  # Renderiza o template de login
-def planos_view(request):
+#Classe planos
+def planos(request):
+    
     return render(request, 'planos.html')
