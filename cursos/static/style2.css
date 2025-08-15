@@ -1,110 +1,215 @@
-/* Importação de fontes (você já tem no HTML, mas é bom ter aqui para organização) */
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700;900&family=Poppins:wght@400&display=swap');
+/* Fontes futuristas */
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@600;900&family=Rajdhani:wght@400;600&display=swap');
 
-/* Estilos gerais do corpo da página */
-body {
-    font-family: 'Poppins', sans-serif;
-    background-color: #f8f9fa; /* Um cinza claro para o fundo */
-    color: #343a40; /* Cor de texto padrão */
+/* Variáveis de cor e padrão */
+:root {
+  --ciano: #00d0e0;
+  --ciano-soft: rgba(0, 208, 224, 0.25);
+  --cinza-fundo: #0f0f0f;
+  --cinza-card: #1a1a1a;
+  --texto-padrao: #d0d0d0;
+  --texto-suave: #bbb;
+  --cinza-borda: #2e2e2e;
 }
 
-/* Estilos para o cabeçalho/navegação */
+/* Corpo geral */
+body {
+  font-family: 'Rajdhani', sans-serif;
+  background-color: var(--cinza-fundo);
+  color: var(--texto-padrao);
+  font-size: 16px;
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+}
+
+/* Navbar */
 header.navbar {
-    background-color: #212529 !important; /* Cor de fundo escura, padrão do bootstrap */
-    border-bottom: 3px solid #007bff; /* Linha azul destacando o rodapé */
+  background-color: #050505 !important;
+  border-bottom: 2px solid var(--ciano);
+  box-shadow: 0 0 6px var(--ciano-soft);
+  padding: 1rem 2rem;
+}
+
+.navbar-brand {
+  font-family: 'Orbitron', sans-serif;
+  font-weight: 700;
+  font-size: 1.5rem;
+  color: var(--ciano);
+  text-shadow: 0 0 3px var(--ciano-soft);
+  text-decoration: none;
 }
 
 .navbar-brand img {
-    /* Garante que a imagem não seja muito grande */
-    max-width: 150px;
-    height: auto;
+  max-width: 150px;
+  filter: drop-shadow(0 0 2px var(--ciano-soft));
 }
 
-/* Estilos para a seção hero (topo da página) */
+.navbar a {
+  color: var(--ciano);
+  text-decoration: none;
+  margin-left: 1.5rem;
+  font-weight: 600;
+  transition: color 0.3s;
+}
+
+.navbar a:hover {
+  color: #ffffff;
+}
+
+/* HERO */
 #hero {
-    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('img/background.jpg') no-repeat center center;
-    background-size: cover;
-    color: #ffffff;
+  background: linear-gradient(rgba(5, 5, 5, 0.85), rgba(5, 5, 5, 0.85)), 
+              url('img/background.jpg') no-repeat center center;
+  background-size: cover;
+  text-align: center;
+  padding: 100px 20px;
+  color: #ffffff;
 }
 
 #hero h1 {
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 900;
-    text-transform: uppercase;
-    font-size: 3rem; /* Tamanho da fonte para a headline */
+  font-family: 'Orbitron', sans-serif;
+  font-weight: 900;
+  font-size: 3.2rem;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  text-shadow: 0 0 4px var(--ciano), 0 0 8px var(--ciano-soft);
 }
 
-/* Estilos para os botões */
+#hero p {
+  font-size: 1.2rem;
+  color: var(--texto-suave);
+  margin-top: 1rem;
+}
+
+/* Botões */
 .btn-primary {
-    background-color: #007bff; /* Cor principal azul */
-    border-color: #007bff;
-    font-weight: bold;
-    text-transform: uppercase;
-    transition: background-color 0.3s ease;
+  background: linear-gradient(45deg, var(--ciano), #0050d0);
+  border: none;
+  color: #000;
+  font-family: 'Orbitron', sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding: 0.7rem 1.3rem;
+  box-shadow: 0 0 6px var(--ciano-soft);
+  transition: all 0.3s ease;
+  cursor: pointer;
 }
 
 .btn-primary:hover {
-    background-color: #0056b3; /* Tom mais escuro no hover */
-    border-color: #004085;
+  background: linear-gradient(45deg, #0050d0, var(--ciano));
+  box-shadow: 0 0 10px var(--ciano-soft);
 }
 
 .btn-outline-light {
-    color: #ffffff;
-    border-color: #ffffff;
-    transition: background-color 0.3s ease, color 0.3s ease;
+  background: transparent;
+  color: var(--ciano);
+  border: 1.5px solid var(--ciano);
+  font-family: 'Orbitron', sans-serif;
+  text-transform: uppercase;
+  padding: 0.6rem 1.2rem;
+  transition: all 0.3s ease;
+  cursor: pointer;
 }
 
 .btn-outline-light:hover {
-    background-color: #ffffff;
-    color: #212529;
+  background-color: var(--ciano);
+  color: #000;
+  box-shadow: 0 0 6px var(--ciano-soft);
 }
 
-/* Estilos para os cartões (cards de curso) */
+/* Cards */
 .card {
-    border: none;
-    border-radius: 10px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background-color: var(--cinza-card);
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 0 6px var(--ciano-soft);
+  border: 1px solid var(--cinza-borda);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .card:hover {
-    transform: translateY(-5px); /* Efeito de elevação no hover */
-    box-shadow: 0 1rem 3rem rgba(0,0,0,.175)!important;
+  transform: scale(1.02);
+  box-shadow: 0 0 12px var(--ciano-soft);
 }
 
+/* Melhor estilo para o título do curso */
 .card-title {
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 700;
-    color: #007bff;
+  font-family: 'Orbitron', sans-serif;
+  font-weight: 900;
+  color: var(--ciano);
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+  font-size: 1.4rem;
+  text-shadow:
+    0 0 3px rgba(0, 208, 224, 0.6),
+    0 0 7px rgba(0, 208, 224, 0.45),
+    0 0 10px rgba(0, 208, 224, 0.35);
+  margin-bottom: 0.75rem;
+  transition: color 0.3s ease;
+}
+
+.card-title:hover {
+  color: #00f0ff;
+  text-shadow:
+    0 0 1px #00f0ff,
+    0 0 3px #00f0ff,
+    0 0 5px #00f0ff;
 }
 
 .card-text {
-    font-size: 0.95rem;
-    color: #6c757d;
+  color: var(--texto-suave);
+  font-size: 1rem;
 }
 
-/* Estilos para a página de detalhes do curso */
+/* Seção principal */
 main.container {
-    padding-top: 2rem;
-    padding-bottom: 2rem;
+  padding: 3rem 1rem;
 }
 
+/* Vídeo responsivo */
 .ratio {
-    border-radius: 10px;
-    overflow: hidden; /* Garante que as bordas arredondadas funcionem */
-    box-shadow: 0 0.5rem 1rem rgba(0,0,0,.15);
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 0 10px var(--ciano-soft);
 }
 
-/* Estilos para a seção de contato */
+/* Seção de Contato */
 #contato {
-    background-color: #212529 !important; /* Cor de fundo escura, padrão do bootstrap */
+  background-color: #101010 !important;
+  padding: 3rem 1rem;
+  color: #fff;
+  text-align: center;
 }
 
 #contato h2 {
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 900;
+  font-family: 'Orbitron', sans-serif;
+  font-weight: 900;
+  color: var(--ciano);
+  text-shadow: 0 0 5px var(--ciano-soft);
 }
 
-/* Estilos para o rodapé */
+/* Rodapé */
 footer.bg-dark {
-    border-top: 3px solid #007bff; /* Linha azul destacando o rodapé */
+  background-color: #050505 !important;
+  border-top: 2px solid var(--ciano);
+  color: #888;
+  padding: 1rem;
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+/* Responsividade básica */
+@media (max-width: 768px) {
+  #hero h1 {
+    font-size: 2.2rem;
+  }
+
+  .card {
+    margin: 1rem 0;
+  }
+
+  .card-title {
+    font-size: 1.2rem;
+  }
 }
