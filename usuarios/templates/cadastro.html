@@ -2,62 +2,52 @@
 <style>
     :root {
         --primary-color: #4e73df;
-        --primary-hover: #2e59d9;
-        --text-color: #5a5c69;
-        --light-gray: #f8f9fc;
-        --border-color: #d1d3e2;
+        --primary-hover: #5f528d;
+        --text-color: #ffffff;
+        --light-gray: rgba(255, 255, 255, 0.1);
+        --border-color: rgba(255, 255, 255, 0.2);
         --error-color: #e74a3b;
-        --shadow: 0 0.15rem 1.75rem 0 rgba(58, 59, 69, 0.15);
-    }
-
-    * {
-        box-sizing: border-box;
-        margin: 0;
-        padding: 0;
+        --shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
     }
 
     body {
-        font-family: 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-        background-color: #f8fafc;
+        background: linear-gradient(135deg, #000000 0%, #090225 100%);
+        font-family: 'Poppins', sans-serif;
         color: var(--text-color);
-        line-height: 1.6;
-    }
-
-    .container {
-        display: flex;
-        justify-content: center;
-        align-items: center;
         min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
         padding: 20px;
     }
 
     .card {
+        background-color: rgba(0, 0, 0, 0.05);
+        backdrop-filter: blur(10px);
+        border-radius: 15px;
+        box-shadow: var(--shadow);
+        padding: 2.5rem;
         width: 100%;
         max-width: 500px;
-        background: white;
-        border-radius: 12px;
-        overflow: hidden;
-        box-shadow: var(--shadow);
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        transition: all 0.3s ease;
     }
 
     .card:hover {
+        box-shadow: 0 15px 40px rgba(255, 255, 255, 0.4);
         transform: translateY(-5px);
-        box-shadow: 0 0.5rem 2rem rgba(58, 59, 69, 0.2);
-    }
-
-    .card-body {
-        padding: 2.5rem;
     }
 
     h2 {
-        font-size: 1.75rem;
-        font-weight: 600;
-        margin-bottom: 1.5rem;
+        color: #fff;
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 900;
         text-align: center;
-        color: var(--text-color);
+        margin-bottom: 2rem;
+        font-size: 2rem;
+        letter-spacing: 1px;
         position: relative;
-        padding-bottom: 10px;
+        padding-bottom: 15px;
     }
 
     h2::after {
@@ -66,79 +56,79 @@
         bottom: 0;
         left: 50%;
         transform: translateX(-50%);
-        width: 50px;
+        width: 80px;
         height: 3px;
-        background: var(--primary-color);
+        background: #ffffff;
         border-radius: 3px;
     }
 
     .form-group {
-        margin-bottom: 1.75rem;
-        position: relative;
+        margin-bottom: 2rem;  /* Aumentei o espaçamento */
     }
 
     label {
-        display: block;
-        margin-bottom: 0.5rem;
-        font-size: 0.9rem;
+        color: rgba(255, 255, 255, 0.8);
         font-weight: 500;
-        color: var(--text-color);
+        margin-bottom: 0.8rem;  /* Aumentei o espaçamento */
+        display: block;
+        font-size: 1rem;  /* Tamanho maior para o label */
     }
 
+    /* CAIXAS DE INPUT MAIORES */
     .form-control {
-        width: 100%;
-        padding: 0.75rem 1rem;
-        font-size: 1rem;
-        border: 1px solid var(--border-color);
+        background-color: rgba(255, 255, 255, 0.1);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        color: #ffffff;
+        padding: 15px 20px;  /* Padding maior */
         border-radius: 8px;
+        width: 100%;
         transition: all 0.3s ease;
-        background-color: #fff;
+        font-size: 1rem;  /* Fonte maior */
+        height: 50px;  /* Altura fixa maior */
     }
 
     .form-control:focus {
-        border-color: var(--primary-color);
-        box-shadow: 0 0 0 3px rgba(78, 115, 223, 0.15);
+        background-color: rgba(255, 255, 255, 0.15);
+        border-color: #4e73df;
+        box-shadow: 0 0 0 0.25rem rgba(78, 115, 223, 0.25);
+        color: #fff;
         outline: none;
     }
 
     .btn-primary {
-        background-color: var(--primary-color);
-        color: white;
+        background-color: #ffffff;
         border: none;
-        padding: 0.75rem;
-        font-size: 1rem;
+        padding: 15px;  /* Padding maior */
         font-weight: 600;
+        letter-spacing: 1px;
         border-radius: 8px;
-        cursor: pointer;
-        transition: all 0.3s ease;
         width: 100%;
-        display: block;
+        transition: all 0.3s ease;
         text-transform: uppercase;
-        letter-spacing: 0.5px;
+        color: black;
+        cursor: pointer;
+        margin-top: 1.5rem;  /* Espaçamento maior */
+        font-size: 1rem;  /* Fonte maior */
     }
 
     .btn-primary:hover {
         background-color: var(--primary-hover);
         transform: translateY(-2px);
-        box-shadow: 0 4px 12px rgba(78, 115, 223, 0.2);
-    }
-
-    .btn-primary:active {
-        transform: translateY(0);
+        box-shadow: 0 5px 15px rgba(78, 115, 223, 0.4);
+        color: white;
     }
 
     .text-muted {
-        color: #6c757d;
-        font-size: 0.85rem;
-        margin-top: 0.25rem;
-        display: block;
+        color: rgba(255, 255, 255, 0.6) !important;
+        font-size: 0.9rem;  /* Fonte um pouco maior */
+        margin-top: 0.5rem;  /* Espaçamento maior */
     }
 
     .password-requirements {
-        background: #f8f9fa;
-        padding: 0.75rem 1rem;
+        background: rgba(255, 255, 255, 0.1);
+        padding: 1rem;  /* Padding maior */
         border-radius: 8px;
-        margin-top: 0.5rem;
+        margin-top: 0.75rem;  /* Espaçamento maior */
     }
 
     .password-requirements ul {
@@ -147,37 +137,39 @@
     }
 
     .password-requirements li {
-        font-size: 0.85rem;
-        margin-bottom: 0.25rem;
-        color: #6c757d;
+        font-size: 0.9rem;  /* Fonte um pouco maior */
+        margin-bottom: 0.5rem;  /* Espaçamento maior */
+        color: rgba(255, 255, 255, 0.7);
+        line-height: 1.5;  /* Melhor espaçamento entre linhas */
     }
 
     .errorlist {
-        color: var(--error-color);
-        font-size: 0.85rem;
-        margin-top: 0.25rem;
+        color: #ff6b6b;
+        font-size: 0.9rem;  /* Fonte um pouco maior */
+        margin-top: 0.5rem;  /* Espaçamento maior */
         list-style: none;
         padding-left: 0;
     }
 
     .login-link {
-        color: var(--primary-color);
+        color: #ffffff;
         text-decoration: none;
         font-weight: 500;
         transition: color 0.2s ease;
+        font-size: 1rem;  /* Fonte maior */
     }
 
     .login-link:hover {
-        color: var(--primary-hover);
+        color: #4e73df;
         text-decoration: underline;
     }
 
     .text-center {
         text-align: center;
+        margin-top: 2rem;  /* Espaçamento maior */
+        color: rgba(255, 255, 255, 0.6);
+        font-size: 1rem;  /* Fonte maior */
     }
-
-    .mt-3 { margin-top: 1rem; }
-    .mt-4 { margin-top: 1.5rem; }
 
     /* Animações */
     @keyframes fadeIn {
@@ -191,50 +183,54 @@
 
     /* Responsividade */
     @media (max-width: 576px) {
-        .card-body {
-            padding: 1.5rem;
+        .card {
+            padding: 1.75rem;  /* Padding maior */
         }
         
         h2 {
-            font-size: 1.5rem;
+            font-size: 1.75rem;  /* Fonte um pouco menor */
+        }
+        
+        .form-control {
+            padding: 14px 18px;  /* Padding um pouco menor */
+            height: 48px;  /* Altura um pouco menor */
         }
     }
 </style>
 
 <div class="container">
-    <div class="card shadow">
+    <div class="card">
         <div class="card-body">
-            <h2>Crie sua conta</h2>
+            <h2>Cadastre-se</h2>
             <form method="post">
                 {% csrf_token %}
                 <div class="form-group">
                     <label for="id_username">Nome de usuário</label>
-                    {{ form.username }}
-                    <small class="text-muted">Obrigatório. 150 caracteres ou menos. Letras, números e @/./+/-/_ apenas.</small>
+                    <input type="text" class="form-control" id="id_username" name="username" required placeholder="Digite seu nome de usuário">
                 </div>
                 <div class="form-group">
                     <label for="id_password1">Senha</label>
-                    {{ form.password1 }}
+                    <input type="password" class="form-control" id="id_password1" name="password1" required placeholder="Digite sua senha">
                     <div class="password-requirements">
                         <small class="text-muted">
                             <ul>
-                                <li>Sua senha não pode ser muito parecida com suas outras informações pessoais.</li>
-                                <li>Sua senha precisa conter pelo menos 8 caracteres.</li>
-                                <li>Sua senha não pode ser uma senha comumente usada.</li>
-                                <li>Sua senha não pode ser inteiramente numérica.</li>
+                                <p><li>Sua senha não pode ser muito parecida com suas outras informações pessoais.</li></p>
+                                <p><li>Sua senha precisa conter pelo menos 8 caracteres.</li></p>
+                                <p><li>Sua senha não pode ser uma senha comumente usada.</li></p>
+                                <p><li>Sua senha não pode ser inteiramente numérica.</li></p>
                             </ul>
                         </small>
                     </div>
                 </div>
                 <div class="form-group">
                     <label for="id_password2">Confirme sua senha</label>
-                    {{ form.password2 }}
+                    <input type="password" class="form-control" id="id_password2" name="password2" required placeholder="Confirme sua senha">
                 </div>
-                <button type="submit" class="btn btn-primary mt-4">
-                    Cadastrar
+                <button type="submit" class="btn btn-primary">
+                    <i class="bi bi-person-plus me-2"></i>Cadastrar
                 </button>
             </form>
-            <div class="text-center mt-3">
+            <div class="text-center">
                 <p>Já tem uma conta? <a href="{% url 'login' %}" class="login-link">Faça login aqui</a></p>
             </div>
         </div>
